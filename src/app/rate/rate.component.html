@@ -1,0 +1,261 @@
+<div class="ratereview mt-3">
+  <div class="rate">
+    <div class="ratehead ">
+     <span class="ml-5"  style="color:white ;font-size:15px;
+     padding-top:10px;display:flex;align-items:center"> Rate Review</span>
+    </div>
+
+
+    <form class="mt-3"  [formGroup]="registerForm" (ngSubmit)="signup();">
+      <div class="form-group">
+        <label>Description</label>
+        <input type="text" class="form-control">
+      </div>
+
+
+      <div class="form-group">
+        <label>SIC Code </label>
+        <select class="form-control">
+          <option *ngFor="let dept of department">
+            {{dept.name}}
+          </option>
+
+        </select><br>
+        <div class="row">
+          <div class="col-lg-7">
+           
+                         <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">
+                    <span>$</span>
+                </span>                    
+            </div>
+            <input type="text" class="form-control" placeholder="3,54032">
+        </div>
+
+          </div>
+
+          <div class="col-lg-5">
+                <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <span>#</span>
+                                </span>                    
+                            </div>
+                            <input type="text" class="form-control" placeholder="1,500">
+                      </div>
+          </div>
+
+          <div class="col-lg-7">
+                <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <span>$</span>
+                                </span>                    
+                            </div>
+                      
+                            <input type="text" class="form-control" placeholder="3,5402">
+                      </div>
+          </div>
+
+          <div class="col-lg-5">
+                <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <span>#</span>
+                                </span>                    
+                            </div>
+                      
+                            <input type="text" class="form-control" placeholder="1,982">
+                      </div>
+          </div>
+
+
+          <div class="col-lg-7">
+                <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <span>$</span>
+                                </span>                    
+                            </div>
+                            <input type="text" class="form-control" placeholder="3,7865">
+                      </div>
+          </div>
+
+          <div class="col-lg-5">
+                <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <span>#</span>
+                                </span>                    
+                            </div>
+                    
+                            <input type="text" class="form-control" placeholder="2,898">
+                      </div>
+          </div>
+
+
+          <div class="col-lg-7">
+                <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <span>$</span>
+                                </span>                    
+                            </div>
+                            <input type="text" class="form-control" placeholder="4,54032">
+                      </div>
+          </div>
+
+          <div class="col-lg-5">
+                <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <span>#</span>
+                                </span>                    
+                            </div>
+                      
+                            <input type="text" class="form-control" placeholder="1,876">
+                      </div>
+          </div>
+
+
+          
+          <div class="col-lg-7">
+                <label>Total Volume</label>
+                <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <span>$</span>
+                                </span>                    
+                            </div>
+                            <!-- <input type="text" class="form-control" placeholder="4,54032"> -->
+                            <input type="text" formControlName="volume" class="form-control" placeholder="4,54032" [ngClass]="{ 'is-invalid': submitted && fval.volume.errors }"/>
+                            <div *ngIf="submitted && fval.volume.errors" class="invalid-feedback">
+                            <div *ngIf="fval.volume.errors.required">
+                                Volume required
+                            </div>
+                             
+                            </div>
+                      </div>
+          </div>
+
+          <div class="col-lg-5">
+                <label>Total Transation</label>
+                <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <span>#</span>
+                                </span>                    
+                            </div>
+                      
+                            <!-- <input type="text" class="form-control" placeholder="1,876"> -->
+                            <input type="text" formControlName="transation" class="form-control" placeholder="4,54032" [ngClass]="{ 'is-invalid': submitted && fval.transation.errors }"/>
+                            <div *ngIf="submitted && fval.transation.errors" class="invalid-feedback">
+                            <div *ngIf="fval.transation.errors.required">
+                                    Transation required
+                            </div>
+                             
+                            </div>
+                      </div>
+          </div>
+
+
+          
+          <div class="col-lg-7">
+                <label>Avg  Ticket</label>
+                <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <span>$</span>
+                                </span>                    
+                            </div>
+                            <!-- <input type="text" class="form-control" placeholder="4,54032"> -->
+                            <input type="text" formControlName="avgTicket" class="form-control" placeholder="4,54032" [ngClass]="{ 'is-invalid': submitted && fval.avgTicket.errors }"/>
+                            <div *ngIf="submitted && fval.avgTicket.errors" class="invalid-feedback">
+                            <div *ngIf="fval.avgTicket.errors.required">
+                                    Average Ticket required
+                            </div>
+                             
+                            </div>
+                      </div>
+          </div>
+
+          <div class="col-lg-5">
+                <label>Current  Rate</label>
+                <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <span>#</span>
+                                </span>                    
+                            </div>
+                      
+                            <!-- <input type="text" class="form-control" placeholder="1,876"> -->
+                            <input type="text" formControlName="currentRate" class="form-control" placeholder="1,876" [ngClass]="{ 'is-invalid': submitted && fval.currentRate.errors }"/>
+                            <div *ngIf="submitted && fval.currentRate.errors" class="invalid-feedback">
+                            <div *ngIf="fval.currentRate.errors.required">
+                                    Current rate required
+                            </div>
+                             
+                            </div>
+                      </div>
+          </div>
+
+
+          
+          <div class="col-lg-7">
+                 <label>Current  Fees</label>
+                <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <span>$</span>
+                                </span>                    
+                            </div>
+                            <!-- <input type="text" class="form-control" placeholder="4,54032"> -->
+                            <input type="text" formControlName="currentFee" class="form-control" placeholder="1,876" [ngClass]="{ 'is-invalid': submitted && fval.currentFee.errors }"/>
+                            <div *ngIf="submitted && fval.currentFee.errors" class="invalid-feedback">
+                            <div *ngIf="fval.currentFee.errors.required">
+                                    Current Fees required
+                            </div>
+                             
+                            </div>
+                      </div>
+          </div>
+
+          <div class="col-lg-5">
+              <label>Current Amex Fees</label>
+                <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <span>#</span>
+                                </span>                    
+                            </div>
+                      
+                     
+                            <input type="text" formControlName="amexFee" class="form-control" placeholder="1,876" [ngClass]="{ 'is-invalid': submitted && fval.amexFee.errors }"/>
+                            <div *ngIf="submitted && fval.amexFee.errors" class="invalid-feedback">
+                            <div *ngIf="fval.amexFee.errors.required">
+                                    Current Amex Fees required
+                            </div>
+                             
+                            </div>
+                        </div>
+          </div>
+
+          
+
+
+        </div>
+
+
+
+
+
+      </div>
+<div class="text-center">
+      <button type="submit" class="savebtn">Save</button>
+</div>
+ 
+    </form>
+  </div>
+
+</div>

@@ -1,0 +1,45 @@
+
+<div class="pricing mt-3">
+        <div class="price">
+                <div class="pricehead  ">
+                  <span class="ml-5  mt-3" style="color:white;font-size:15px;
+                  padding-top:10px;display:flex;align-items:center">Select Pricing Option</span>
+                </div>
+                
+
+                <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Saving</th>
+                            <th scope="col">Residuals</th>
+                            <th scope="col">Rate</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+
+                                <tr  *ngFor="let price of prices">
+                                        <td>{{price.name}}</td>
+                                    <td  (click)="funSave(element)">${{price.saving}}</td>
+                                    <td>${{price.residuals}}</td>
+                                    <td>{{price.rate}}%</td>
+                                  </tr>
+                        
+                        </tbody>
+                      </table>
+
+                      <div class="fees mt-5">
+                          <span style="font-size:18px;font-weight:500;">Non-Monthly Fees</span>
+                          <button class="ml-3">Add</button>
+                          </div>
+
+                        <div class="finalbtn mt-3 text-center">
+                            <button  class="fnlbtn">Final Proposal Details Below</button>
+                        </div>  
+                        
+                        <div class="update mt-5">
+                            <span style="font-size:18px;font-weight:500;">Proposal</span>
+                            <button class="ml-3">Update</button>
+                        </div>    
+</div>    
+</div>
